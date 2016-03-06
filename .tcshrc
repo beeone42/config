@@ -1,0 +1,47 @@
+set	prompt="[%B$USER%b@%m %h] %B%~%b>"
+set	ignoreof
+set	history=200
+set	savehist=50
+set	watch=(1 $USER any)
+set	path=(/usr/sbin /sbin /usr/bin /bin /usr/pkg/sbin /usr/pkg/bin /usr/local/sbin /usr/local/bin /usr/X11R6/bin)
+set	cdpath=(~)
+set	autolist
+
+setenv EDITOR emacs
+
+unset	autologout
+#
+# alias
+#
+
+alias	a	alias
+a	l	ls -lg
+a	ll	ls -l
+a	lm	'ls -la \!* | more'
+a	la	ls -la
+a	lg	ls -lg
+a	lc	ls -CF
+a	j	jobs
+a	h	history
+a	xl	'sleep 5;exlock  -notime -immed -user $USER'
+a	XT	'/usr/bin/X11/xterm $XTERM_OPTS < /dev/null >& /dev/null &'
+a	xon	rxt
+a	xoo	rxt
+a	P	pushd
+a	run	'ru -Nhn|sort -t\> +1 -r'
+a	rui	'ru -Nhni|sort -t\> +1 -r'
+a	runa	'ru -Nhan|sort -t\> +1 -r'
+a	ruia	'ru -Nhnai|sort -t\> +1 -r'
+a	rus	'ru -Nns'
+a	ne	'\emacs -nw'
+a	clean	'rm -f *~ .*~ #*#'
+a	srx	'screen -rx'
+#
+# bindings
+#
+bindkey ^R i-search-back
+#
+#
+if ( -f ~/.mytcshrc ) then
+source ~/.mytcshrc
+endif
