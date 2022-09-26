@@ -2,7 +2,7 @@
 bindkey -k up history-search-backward
 bindkey -k down history-search-forward
 
-set path=($path $HOME/sh $HOME/bin $HOME/mbin /usr/local/bin )
+set path=($path $HOME/sh $HOME/bin $HOME/mbin /usr/local/bin $HOME/.local/bin )
 set prompt2="? "
 set prompt3="%R ? (yes/no/edit)"
 set correct=cmd
@@ -16,3 +16,7 @@ setenv LS_COLORS 'no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd
 #setenv LSCOLORS 4x6x5x5x2x464301060203
 
 set nobeep
+
+unset watch
+
+a 42 'ssh -p 4222 -l root'
