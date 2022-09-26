@@ -2,7 +2,7 @@ set	prompt="[%B$USER%b@%m %h] %B%~%b>"
 set	ignoreof
 set	history=200
 set	savehist=50
-set	watch=(1 $USER any)
+#set	watch=(1 $USER any)
 set	path=(/usr/sbin /sbin /usr/bin /bin /usr/pkg/sbin /usr/pkg/bin /usr/local/sbin /usr/local/bin /usr/X11R6/bin)
 set	cdpath=(~)
 set	autolist

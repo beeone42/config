@@ -2,7 +2,7 @@
 bindkey -k up history-search-backward
 bindkey -k down history-search-forward
 
-set path=($path $HOME/sh $HOME/bin $HOME/mbin /usr/local/bin )
+set path=($path $HOME/sh $HOME/bin $HOME/mbin /usr/local/bin /mnt/c/Users/seb/AppData/Local/Programs/Microsoft\ VS\ Code/bin /home/beeone/.local/bin)
 set prompt2="? "
 set prompt3="%R ? (yes/no/edit)"
 set correct=cmd
@@ -11,8 +11,16 @@ set autolist=true
 set who=" %n %a %l from %m - %t %d %w %y"
 set color
 
-setenv LS_COLORS 'no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.png=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:'
+#setenv LS_COLORS 'no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.png=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:'
 
-setenv LSCOLORS 4x6x5x5x2x464301060203
+#setenv LSCOLORS 4x6x5x5x2x464301060203
 
 set nobeep
+
+alias 42	ssh -p 4222 -i $HOME/.ssh/yubi -i $HOME/.ssh/id_ed25519 -l root
+alias sp	ssh -p 4222 -i $HOME/.ssh/id_rsa -l debian -t ansiblevms.42sp.org.br ssh -t
+
+#if ( ! $?SSH_AUTH_SOCK ) then
+#	eval `ssh-agent -c`
+#	ssh-add
+#endif
