@@ -2,7 +2,9 @@
 bindkey -k up history-search-backward
 bindkey -k down history-search-forward
 
-set path=($path $HOME/sh $HOME/bin $HOME/mbin /usr/local/bin /mnt/c/Users/seb/AppData/Local/Programs/Microsoft\ VS\ Code/bin /home/beeone/.local/bin)
+<<<<<<< HEAD
+set path=($path $HOME/sh $HOME/bin $HOME/mbin /usr/local/bin $HOME/.local/bin )
+>>>>>>> 7453466a0059aba3e715a87a91d7b329b395d1bc
 set prompt2="? "
 set prompt3="%R ? (yes/no/edit)"
 set correct=cmd
@@ -17,6 +19,7 @@ set color
 
 set nobeep
 
+<<<<<<< HEAD
 alias 42	ssh -p 4222 -i $HOME/.ssh/yubi -i $HOME/.ssh/id_ed25519 -l root
 alias sp	ssh -p 4222 -i $HOME/.ssh/id_rsa -l debian -t ansiblevms.42sp.org.br ssh -t
 
@@ -24,3 +27,5 @@ alias sp	ssh -p 4222 -i $HOME/.ssh/id_rsa -l debian -t ansiblevms.42sp.org.br ss
 #	eval `ssh-agent -c`
 #	ssh-add
 #endif
+unset watch
+>>>>>>> 7453466a0059aba3e715a87a91d7b329b395d1bc
